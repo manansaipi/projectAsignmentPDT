@@ -11,12 +11,12 @@ $articel = query("SELECT * FROM articel");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mini articel</title>
+    <title>Mini Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleCPage.css">
 </head>
 <body>
-Hallo
+Hallo, users 
 <a href="logout.php" class="logout" style="font-size: 180%;">Logout</a> 
   <div class="wrapper">
     <div class="center-line">
