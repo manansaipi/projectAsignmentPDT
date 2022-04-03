@@ -16,7 +16,7 @@ $articel = query("SELECT * FROM articel");
     <link rel="stylesheet" href="styleCPage.css">
 </head>
 <body>
-Hallo Users
+Hallo
 <a href="logout.php" class="logout" style="font-size: 180%;">Logout</a> 
   <div class="wrapper">
     <div class="center-line">
