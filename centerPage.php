@@ -6,6 +6,8 @@ if (!isset($_SESSION["login"])){
 }
 require 'functions.php';
 $articel = query("SELECT * FROM articel");
+$username = $_SESSION['username'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@ $articel = query("SELECT * FROM articel");
     <link rel="stylesheet" href="styleCPage.css">
 </head>
 <body>
-Hallo, <?php echo $_SESSION["username"]; ?>
+Hallo, <?php echo $_SESSION["username"]; ?> !
 <a href="logout.php" class="logout" style="font-size: 180%;">Logout</a> 
   <div class="wrapper">
     <div class="center-line">
@@ -32,9 +34,14 @@ Hallo, <?php echo $_SESSION["username"]; ?>
         </div>
         <p><?= $artcl["content"]; ?></p>
         <div class="bottom">
+        
           <a href="detail.php?id=<?= $artcl["id"]; ?>"">Detail</a>
+          <?php if($username === $artcl["name"] ) : ?>
           <a href="edit.php?id=<?= $artcl["id"]; ?>">Edit</a>
+          <?php endif; ?>
+          <?php if($username === $artcl["name"] ) : ?>
           <a href="delete.php?id=<?= $artcl["id"]; ?>" onClick="return confirm('Delete articel ?');">Delete</a>
+          <?php endif; ?>
           <i>- <?= $artcl["name"]; ?></i>
         </div>
       </section>  
