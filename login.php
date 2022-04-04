@@ -18,8 +18,9 @@ if( isset($_POST["login"]) ){
             header("Location: centerPage.php");
             exit;
         }
+        $error = true;
     }
-    $error = true;
+    
    }
 }
 ?>

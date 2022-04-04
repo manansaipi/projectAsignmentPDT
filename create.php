@@ -13,12 +13,10 @@ require 'functions.php';
                         alert('Your articel has been saved!')
                         document.location.href = 'centerPage.php'
                     </script>";
-
         } else {
             echo "<script>alert('erorr!') document.location.href = 'centerPage.php'</script>";
         }
     }
-
 ?>
 <!DOCTYPE html>
 
@@ -38,8 +36,7 @@ require 'functions.php';
             <div class="content">
             </div>
             <div class="input-container">
-		<input type="text" name="name" id="name" required=""/>
-		<label>Enter Your name</label>
+		<input type="hidden" name="name" id="name" value="<?php echo $_SESSION["username"]; ?>" required=""/>
             <div class="input-container">
 		<input type="text" name="title" id="tittle" required=""/>
 		<label>Title</label>

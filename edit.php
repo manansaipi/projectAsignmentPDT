@@ -42,8 +42,7 @@ $data = query("SELECT * FROM articel WHERE id = $id")[0];
             <div class="content">
             </div>
             <div class="input-container">
-		<input type="text" name="name" id="name" value="<?= $data["name"] ?>" required=""/>
-		<label>Enter Your name</label>
+		<input type="hidden" name="name" id="name" value="<?php echo $_SESSION["username"]; ?>" required=""/>
             <div class="input-container">
 		<input type="text" name="title" id="tittle" value="<?= $data["title"] ?>" required=""/>
 		<label>Title</label>
